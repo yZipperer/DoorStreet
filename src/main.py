@@ -191,8 +191,33 @@ def next_day():
                 pass
         else:
             pass
+    
+    print(f"""
+    ========================================================
+    {select_news()}
+    ========================================================
+    """)
+
     input("A new day has arrived...")
     menu()
+
+def select_news():
+    news = random.choice(inventory_data["news"])
+    currentNews = inventory_data["active news"]
+
+    if news in currentNews:
+        select_news()
+    else:
+        inventory_data["news"].remove(news)
+        inventory_data["active news"].append(news)
+
+        for stock in news["affected stocks"]:
+            inventory_data["stocks"][stock]["current news"] = news["headline"]
+            inventory_data["stocks"][stock]["news change"] = news["change"]
+            inventory_data["stocks"][stock]["news effect"] = news["effect"]
+            inventory_data["stocks"][stock]["days effect"] = news["days"]
+        
+        return news["headline"]
 
 def achievements():
     print("Achievements")
@@ -217,7 +242,7 @@ def stock_info():
 ======================
     Energy Sector:
 ----------------------
-    Bason Oil: {master_list["BSO"]["desc"]}
+    Bawson Oil: {master_list["BSO"]["desc"]}
 ======================
     Restaurant Sector:
 ----------------------

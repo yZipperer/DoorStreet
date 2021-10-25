@@ -23,18 +23,49 @@
         "BSO": {
             "price": 83,
             "volatility": 0.059,
-            "news effect": "none"
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0
         },
         "CSC": {
             "price": 17,
             "volatility": 0.04,
-            "news effect": "none"
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0
         }
     },
-    "current news": [
-
-    ],
+    "active news": [],
     "news": [
-
+        {
+            "headline": "Oil Spill in the South Atlantic, Millions Affected",
+            "effect": "down",
+            "change": 0.01,
+            "days": 7,
+            "affected stocks": ["BSO"]
+        },
+        {
+            "headline": "Bawson Oil Executive Donates to Charity",
+            "effect": "up",
+            "change": 0.03,
+            "days": 1,
+            "affected stocks": ["BSO"]
+        },
+        {
+            "headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage",
+            "effect": "up",
+            "change": 0.02,
+            "days": 5,
+            "affected stocks": ["BSO"]
+        },
+        {
+            "headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold",
+            "effect": "down",
+            "change": 0.04,
+            "days": 1,
+            "affected stocks": ["BSO"]
+        }
     ]
 }
