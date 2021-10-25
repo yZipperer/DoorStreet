@@ -1,0 +1,42 @@
+{
+    "money": 100,
+    "time": {
+        "day": 1
+    },
+    "portfolio": {
+        "energy": {
+            "BSO": {
+                "symbol": "$BSO",
+                "shares": 0,
+                "each": 0
+            }
+        },
+        "restaurant": {
+            "CSC": {
+                "symbol": "$CSC",
+                "shares": 0,
+                "each": 0
+            }
+        }
+    },
+    "stocks": {
+        "BSO": {
+            "price": 83,
+            "volatility": 0.009,
+            "news volatility": 0,
+            "news effect": "none"
+        },
+        "CSC": {
+            "price": 17,
+            "volatility": 0.004,
+            "news volatility": 0,
+            "news effect": "none"
+        }
+    },
+    "current news": [
+
+    ],
+    "news": [
+
+    ]
+}
