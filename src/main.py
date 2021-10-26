@@ -4,8 +4,9 @@ import os
 import random
 
 master_list = {
-    "BSO": {"sector": "energy", "desc": "Bason Oil is a premier oil supplier. With hundreds of thousands of gas stations throughout the world, in addition to hundreds of oil rigs, production of millions of barrels per month is no tough task."},
-    "CSC": {"sector": "restaurant", "desc": "Colonel Sawyer's Chicken has pioneered the fast food chicken industry. This chicken giant is popular worldwide and has seen great success through their special 42 herbs and spices recipe plus their 0 tolerance policy."},
+    "BSO": {"sector": "energy", "desc": "Bawson Oil is a premier oil supplier. With hundreds of thousands of gas stations throughout the world, in addition to hundreds of oil rigs, production of millions of barrels per month is no tough task. They are also a large supplier of oil to major airlines throughout the world."},
+    "CSC": {"sector": "restaurant", "desc": "Colonel Sawyer's Chicken has pioneered the fast food chicken industry. This chicken giant is popular worldwide and has seen great success through their special 42 herbs and spices recipe plus their 0 tolerance policy. In addition, they have managed to get their trough of chicken to replace existing main holiday courses."},
+    "QPS": {"sector": "technology", "desc": "QIPS is a market place where users can purchase shares of computing power that others are not currently using. The same users can also sell their power when they are not using it. QIPS has largely grown due to a large portion of their users using their service for gaming. They have also managed to keep their prices stable, even during day to day fluctuations in computing availability."}
 }
 
 def load_data():
@@ -84,6 +85,11 @@ def trading_floor():
     ------------------
         $CSC: {inventory_data["portfolio"]["restaurant"]["CSC"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["restaurant"]["CSC"]["each"])}
             Current: ${"{:.2f}".format(inventory_data["stocks"]["CSC"]["price"])}
+    ------------------
+    Technology Sector:
+    ------------------
+        $QPS: {inventory_data["portfolio"]["technology"]["QPS"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["QPS"]["each"])}
+            Current: ${"{:.2f}".format(inventory_data["stocks"]["QPS"]["price"])}
 ======================
     """)
     string = input("Enter Stock To Trade: ")
@@ -163,7 +169,11 @@ def sell_stock(stock):
         inventory_data["portfolio"][sector][stock]["shares"] -= number
         inventory_data["money"] += total
 
-        inventory_data["portfolio"][sector][stock]["each"] = ((each * prev_shares) - total) / total_shares
+        if inventory_data["portfolio"][sector][stock]["shares"] == 0:
+            inventory_data["portfolio"][sector][stock]["each"] = 0
+        else:
+            inventory_data["portfolio"][sector][stock]["each"] = ((each * prev_shares) - total) / total_shares
+
         trading_floor()
     else:
         print("Not enough shares")

@@ -17,6 +17,13 @@
                 "shares": 0,
                 "each": 0
             }
+        },
+        "technology": {
+            "QPS": {
+                "symbol": "$QPS",
+                "shares": 0,
+                "each": 0
+            }
         }
     },
     "stocks": {
@@ -31,6 +38,14 @@
         "CSC": {
             "price": 17,
             "volatility": 0.04,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0
+        },
+        "QPS": {
+            "price": 2,
+            "volatility": 0.02,
             "current news": "",
             "news change": 0,
             "news effect": "none",

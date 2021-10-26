@@ -1,1 +1,86 @@
-{"money": 114.51605593931775, "time": {"day": 17}, "portfolio": {"energy": {"BSO": {"symbol": "$BSO", "shares": 0, "each": 0}}, "restaurant": {"CSC": {"symbol": "$CSC", "shares": 0, "each": 16.32}}}, "stocks": {"BSO": {"price": 98.64444669025698, "volatility": 0.059, "current news": "Oil Spill in the South Atlantic, Millions Affected", "news change": 0.01, "news effect": "down", "days effect": 1}, "CSC": {"price": 21.061677146925813, "volatility": 0.04, "current news": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage", "news change": 0.02, "news effect": "up", "days effect": 1}}, "active news": [{"headline": "Oil Spill in the South Atlantic, Millions Affected", "effect": "down", "change": 0.01, "days": 7, "affected stocks": ["BSO"]}, {"headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage", "effect": "up", "change": 0.02, "days": 5, "affected stocks": ["CSC"]}], "news": [{"headline": "Bawson Oil Executive Donates to Charity", "effect": "up", "change": 0.03, "days": 1, "affected stocks": ["BSO"]}, {"headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold", "effect": "down", "change": 0.04, "days": 1, "affected stocks": ["CSC"]}]}
+{
+    "money": 100,
+    "time": {
+        "day": 1
+    },
+    "portfolio": {
+        "energy": {
+            "BSO": {
+                "symbol": "$BSO",
+                "shares": 0,
+                "each": 0
+            }
+        },
+        "restaurant": {
+            "CSC": {
+                "symbol": "$CSC",
+                "shares": 0,
+                "each": 0
+            }
+        },
+        "technology": {
+            "QPS": {
+                "symbol": "$QPS",
+                "shares": 0,
+                "each": 0
+            }
+        }
+    },
+    "stocks": {
+        "BSO": {
+            "price": 83,
+            "volatility": 0.059,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0
+        },
+        "CSC": {
+            "price": 17,
+            "volatility": 0.04,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0
+        },
+        "QPS": {
+            "price": 2,
+            "volatility": 0.02,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0
+        }
+    },
+    "active news": [],
+    "news": [
+        {
+            "headline": "Oil Spill in the South Atlantic, Millions Affected",
+            "effect": "down",
+            "change": 0.01,
+            "days": 7,
+            "affected stocks": ["BSO"]
+        },
+        {
+            "headline": "Bawson Oil Executive Donates to Charity",
+            "effect": "up",
+            "change": 0.03,
+            "days": 1,
+            "affected stocks": ["BSO"]
+        },
+        {
+            "headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage",
+            "effect": "up",
+            "change": 0.02,
+            "days": 5,
+            "affected stocks": ["CSC"]
+        },
+        {
+            "headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold",
+            "effect": "down",
+            "change": 0.04,
+            "days": 1,
+            "affected stocks": ["CSC"]
+        }
+    ]
+}
