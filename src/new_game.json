@@ -58,14 +58,14 @@
             "effect": "up",
             "change": 0.02,
             "days": 5,
-            "affected stocks": ["BSO"]
+            "affected stocks": ["CSC"]
         },
         {
             "headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold",
             "effect": "down",
             "change": 0.04,
             "days": 1,
-            "affected stocks": ["BSO"]
+            "affected stocks": ["CSC"]
         }
     ]
 }

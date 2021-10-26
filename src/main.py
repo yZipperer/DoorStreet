@@ -189,6 +189,51 @@ def next_day():
                 print(f"{stock} +++")
             else:
                 pass
+        elif inventory_data["stocks"][stock]["news effect"] == "up":
+            if inventory_data["stocks"][stock]["days effect"] > 1:
+                change = inventory_data["stocks"][stock]["news change"] * price
+                inventory_data["stocks"][stock]["price"] += change
+                inventory_data["stocks"][stock]["days effect"] -= 1
+                print(f"{stock} +++ news")
+            elif inventory_data["stocks"][stock]["days effect"] <= 1:
+                change = inventory_data["stocks"][stock]["news change"] * price
+                inventory_data["stocks"][stock]["price"] += change
+                for item in inventory_data["active news"]:
+                    if item["headline"] == inventory_data["stocks"][stock]["current news"]:
+                        index = inventory_data["active news"].index(item)
+                removed = inventory_data["active news"].pop(index)
+                inventory_data["news"].append(removed)
+
+                inventory_data["stocks"][stock]["days effect"] = 0
+                inventory_data["stocks"][stock]["news change"] = 0
+                inventory_data["stocks"][stock]["news effect"] = "none"
+                inventory_data["stocks"][stock]["current news"] = ""
+                print(f"{stock} +++ news")
+            else:
+                pass
+        elif inventory_data["stocks"][stock]["news effect"] == "down":
+            if inventory_data["stocks"][stock]["days effect"] > 1:
+                change = inventory_data["stocks"][stock]["news change"] * price
+                inventory_data["stocks"][stock]["price"] -= change
+                inventory_data["stocks"][stock]["days effect"] -= 1
+                print(f"{stock} --- news")
+            elif inventory_data["stocks"][stock]["days effect"] <= 1:
+                change = inventory_data["stocks"][stock]["news change"] * price
+                inventory_data["stocks"][stock]["price"] -= change
+
+                for item in inventory_data["active news"]:
+                    if item["headline"] == inventory_data["stocks"][stock]["current news"]:
+                        index = inventory_data["active news"].index(item)
+                removed = inventory_data["active news"].pop(index)
+                inventory_data["news"].append(removed)
+
+                inventory_data["stocks"][stock]["days effect"] = 0
+                inventory_data["stocks"][stock]["news change"] = 0
+                inventory_data["stocks"][stock]["news effect"] = "none"
+                inventory_data["stocks"][stock]["current news"] = ""
+                print(f"{stock} --- news")
+            else:
+                pass
         else:
             pass
     
@@ -202,22 +247,28 @@ def next_day():
     menu()
 
 def select_news():
-    news = random.choice(inventory_data["news"])
     currentNews = inventory_data["active news"]
+    
+    i = 0
+    while i < 3:
+        news = random.choice(inventory_data["news"])
+        if news not in currentNews:
+            affected = news["affected stocks"][0]
+            if inventory_data["stocks"][affected]["current news"] == "":
+                inventory_data["news"].remove(news)
+                inventory_data["active news"].append(news)
 
-    if news in currentNews:
-        select_news()
-    else:
-        inventory_data["news"].remove(news)
-        inventory_data["active news"].append(news)
+                for stock in news["affected stocks"]:
+                    inventory_data["stocks"][stock]["current news"] = news["headline"]
+                    inventory_data["stocks"][stock]["news change"] = news["change"]
+                    inventory_data["stocks"][stock]["news effect"] = news["effect"]
+                    inventory_data["stocks"][stock]["days effect"] = news["days"]
 
-        for stock in news["affected stocks"]:
-            inventory_data["stocks"][stock]["current news"] = news["headline"]
-            inventory_data["stocks"][stock]["news change"] = news["change"]
-            inventory_data["stocks"][stock]["news effect"] = news["effect"]
-            inventory_data["stocks"][stock]["days effect"] = news["days"]
-        
-        return news["headline"]
+                return news["headline"]
+            else:
+                i+=1
+        else:
+            i+=1
 
 def achievements():
     print("Achievements")
