@@ -81,6 +81,20 @@
             "change": 0.04,
             "days": 1,
             "affected stocks": ["CSC"]
+        },
+        {
+            "headline": "European Computer Network Goes Offline for Hours, QIPS prices rise",
+            "effect": "up",
+            "change": 0.10,
+            "days": 1,
+            "affected stocks": ["QPS"]
+        },
+        {
+            "headline": "China Introduces Millions of Devices on the QIPS Network to Lower Regional Costs",
+            "effect": "down",
+            "change": 0.01,
+            "days": 4,
+            "affected stocks": ["QPS"]
         }
     ]
 }
