@@ -33,7 +33,8 @@
             "current news": "",
             "news change": 0,
             "news effect": "none",
-            "days effect": 0
+            "days effect": 0,
+            "stabalize": 0
         },
         "CSC": {
             "price": 17,
@@ -41,7 +42,8 @@
             "current news": "",
             "news change": 0,
             "news effect": "none",
-            "days effect": 0
+            "days effect": 0,
+            "stabalize": 0
         },
         "QPS": {
             "price": 2,
@@ -49,7 +51,8 @@
             "current news": "",
             "news change": 0,
             "news effect": "none",
-            "days effect": 0
+            "days effect": 0,
+            "stabalize": 0
         }
     },
     "active news": [],
@@ -59,42 +62,48 @@
             "effect": "down",
             "change": 0.01,
             "days": 7,
-            "affected stocks": ["BSO"]
+            "affected stocks": ["BSO"],
+            "stabalize": 0.07
         },
         {
             "headline": "Bawson Oil Executive Donates to Charity",
             "effect": "up",
             "change": 0.03,
             "days": 1,
-            "affected stocks": ["BSO"]
+            "affected stocks": ["BSO"],
+            "stabalize": 0.03
         },
         {
             "headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage",
             "effect": "up",
             "change": 0.02,
             "days": 5,
-            "affected stocks": ["CSC"]
+            "affected stocks": ["CSC"],
+            "stabalize": 0.10
         },
         {
             "headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold",
             "effect": "down",
             "change": 0.04,
             "days": 1,
-            "affected stocks": ["CSC"]
+            "affected stocks": ["CSC"],
+            "stabalize": 0.04
         },
         {
             "headline": "European Computer Network Goes Offline for Hours, QIPS prices rise",
             "effect": "up",
             "change": 0.10,
             "days": 1,
-            "affected stocks": ["QPS"]
+            "affected stocks": ["QPS"],
+            "stabalize": 0.10
         },
         {
             "headline": "China Introduces Millions of Devices on the QIPS Network to Lower Regional Costs",
             "effect": "down",
             "change": 0.01,
             "days": 4,
-            "affected stocks": ["QPS"]
+            "affected stocks": ["QPS"],
+            "stabalize": 0.04
         }
     ]
 }
