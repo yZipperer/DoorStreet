@@ -124,8 +124,10 @@ def trading_floor():
 def check_color(stock):
     if inventory_data["stocks"][stock]["price"] > inventory_data["stocks"][stock]["previous price"]:
         return "\u001b[32m"
-    else:
+    elif inventory_data["stocks"][stock]["price"] < inventory_data["stocks"][stock]["previous price"]: 
         return "\u001b[31m"
+    else:
+        return "\u001b[37m"
 
 def buy_stock(stock):
     number = input("""
@@ -346,5 +348,26 @@ def help_menu():
 
 def save_quit():
     save_data()
-    
+
+def settings():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(f"""
+============================================================================
+    Settings: Press Number to toggle true/false
+============================================================================
+    1. Simplified Trade Menu ({inventory_data["settings"]["simplified trade menu"]})
+    """)
+    number = input("Enter Setting to Change: ")
+
+    try:
+        number = int(number)
+    except:
+        return menu()
+
+    if number == 1:
+        inventory_data["settings"]["simplified trade menu"] = not inventory_data["settings"]["simplified trade menu"]
+        settings()
+    else:
+        return menu()
+
 main_screen()

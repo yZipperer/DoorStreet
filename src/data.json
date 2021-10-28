@@ -1,1 +1,115 @@
-{"money": 100, "time": {"day": 4}, "portfolio": {"energy": {"BSO": {"symbol": "$BSO", "shares": 0, "each": 0}}, "restaurant": {"CSC": {"symbol": "$CSC", "shares": 0, "each": 0}}, "technology": {"QPS": {"symbol": "$QPS", "shares": 0, "each": 0}}}, "stocks": {"BSO": {"price": 72.75997377, "previous price": 73.494923, "volatility": 0.059, "current news": "Oil Spill in the South Atlantic, Millions Affected", "news change": 0.01, "news effect": "down", "days effect": 6, "stabalize": 0.07}, "CSC": {"price": 18.394272, "previous price": 18.0336, "volatility": 0.04, "current news": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage", "news change": 0.02, "news effect": "up", "days effect": 3, "stabalize": 0.1}, "QPS": {"price": 1.9592159999999998, "previous price": 1.9991999999999999, "volatility": 0.02, "current news": "European Computer Network Goes Offline for Hours, QIPS prices rise", "news change": 0.1, "news effect": "up", "days effect": 1, "stabalize": 0.1}}, "active news": [{"headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage", "effect": "up", "change": 0.02, "days": 5, "affected stocks": ["CSC"], "stabalize": 0.1}, {"headline": "Oil Spill in the South Atlantic, Millions Affected", "effect": "down", "change": 0.01, "days": 7, "affected stocks": ["BSO"], "stabalize": 0.07}, {"headline": "European Computer Network Goes Offline for Hours, QIPS prices rise", "effect": "up", "change": 0.1, "days": 1, "affected stocks": ["QPS"], "stabalize": 0.1}], "news": [{"headline": "Bawson Oil Executive Donates to Charity", "effect": "up", "change": 0.03, "days": 1, "affected stocks": ["BSO"], "stabalize": 0.03}, {"headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold", "effect": "down", "change": 0.04, "days": 1, "affected stocks": ["CSC"], "stabalize": 0.04}, {"headline": "China Introduces Millions of Devices on the QIPS Network to Lower Regional Costs", "effect": "down", "change": 0.01, "days": 4, "affected stocks": ["QPS"], "stabalize": 0.04}]}
+{
+    "money": 100,
+    "time": {
+        "day": 1
+    },
+    "portfolio": {
+        "energy": {
+            "BSO": {
+                "symbol": "$BSO",
+                "shares": 0,
+                "each": 0
+            }
+        },
+        "restaurant": {
+            "CSC": {
+                "symbol": "$CSC",
+                "shares": 0,
+                "each": 0
+            }
+        },
+        "technology": {
+            "QPS": {
+                "symbol": "$QPS",
+                "shares": 0,
+                "each": 0
+            }
+        }
+    },
+    "stocks": {
+        "BSO": {
+            "price": 83,
+            "previous price": 83,
+            "volatility": 0.059,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0,
+            "stabalize": 0
+        },
+        "CSC": {
+            "price": 17,
+            "previous price": 17,
+            "volatility": 0.04,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0,
+            "stabalize": 0
+        },
+        "QPS": {
+            "price": 2,
+            "previous price": 2,
+            "volatility": 0.02,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0,
+            "stabalize": 0
+        }
+    },
+    "active news": [],
+    "news": [
+        {
+            "headline": "Oil Spill in the South Atlantic, Millions Affected",
+            "effect": "down",
+            "change": 0.01,
+            "days": 7,
+            "affected stocks": ["BSO"],
+            "stabalize": 0.07
+        },
+        {
+            "headline": "Bawson Oil Executive Donates to Charity",
+            "effect": "up",
+            "change": 0.03,
+            "days": 1,
+            "affected stocks": ["BSO"],
+            "stabalize": 0.03
+        },
+        {
+            "headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage",
+            "effect": "up",
+            "change": 0.02,
+            "days": 5,
+            "affected stocks": ["CSC"],
+            "stabalize": 0.10
+        },
+        {
+            "headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold",
+            "effect": "down",
+            "change": 0.04,
+            "days": 1,
+            "affected stocks": ["CSC"],
+            "stabalize": 0.04
+        },
+        {
+            "headline": "European Computer Network Goes Offline for Hours, QIPS prices rise",
+            "effect": "up",
+            "change": 0.10,
+            "days": 1,
+            "affected stocks": ["QPS"],
+            "stabalize": 0.10
+        },
+        {
+            "headline": "China Introduces Millions of Devices on the QIPS Network to Lower Regional Costs",
+            "effect": "down",
+            "change": 0.01,
+            "days": 4,
+            "affected stocks": ["QPS"],
+            "stabalize": 0.04
+        }
+    ],
+    "settings": {
+        "simplified trade menu": false
+    }
+}
