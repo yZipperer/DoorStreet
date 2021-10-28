@@ -42,6 +42,7 @@ def menu():
     6. Achievements
     7. Statistics
     8. Save
+    9. Settings
 ======================
     """)
     try:
@@ -65,6 +66,8 @@ def menu():
         return stats()
     elif number == 8:
         return save_quit()
+    elif number == 9:
+        return settings()
     else:
         return menu()
 
@@ -79,17 +82,17 @@ def trading_floor():
     Energy Sector:
     ------------------
         $BSO: {inventory_data["portfolio"]["energy"]["BSO"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["energy"]["BSO"]["each"])}
-            Current: ${"{:.2f}".format(inventory_data["stocks"]["BSO"]["price"])}
+            Current: {check_color("BSO")}${"{:.2f}".format(inventory_data["stocks"]["BSO"]["price"])}\u001b[37m
     ------------------
     Restaurant Sector:
     ------------------
         $CSC: {inventory_data["portfolio"]["restaurant"]["CSC"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["restaurant"]["CSC"]["each"])}
-            Current: ${"{:.2f}".format(inventory_data["stocks"]["CSC"]["price"])}
+            Current: {check_color("CSC")}${"{:.2f}".format(inventory_data["stocks"]["CSC"]["price"])}\u001b[37m
     ------------------
     Technology Sector:
     ------------------
         $QPS: {inventory_data["portfolio"]["technology"]["QPS"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["QPS"]["each"])}
-            Current: ${"{:.2f}".format(inventory_data["stocks"]["QPS"]["price"])}
+            Current: {check_color("QPS")}${"{:.2f}".format(inventory_data["stocks"]["QPS"]["price"])}\u001b[37m
 ======================
     """)
     string = input("Enter Stock To Trade: ")
@@ -117,6 +120,12 @@ def trading_floor():
             menu()
     except:
         return menu()
+
+def check_color(stock):
+    if inventory_data["stocks"][stock]["price"] > inventory_data["stocks"][stock]["previous price"]:
+        return "\u001b[32m"
+    else:
+        return "\u001b[31m"
 
 def buy_stock(stock):
     number = input("""
@@ -187,6 +196,8 @@ def next_day():
     for stock in inventory_data["stocks"]:
         volatility = inventory_data["stocks"][stock]["volatility"]
         price = inventory_data["stocks"][stock]["price"]
+        inventory_data["stocks"][stock]["previous price"] = price
+
         if inventory_data["stocks"][stock]["news effect"] == "none":
             randNum = random.randrange(1, 100, 1)
             if randNum > 50 and randNum <=100:
@@ -262,7 +273,7 @@ def select_news():
     currentNews = inventory_data["active news"]
     
     i = 0
-    while i < 3:
+    while i < 2:
         news = random.choice(inventory_data["news"])
         if news not in currentNews:
             affected = news["affected stocks"][0]
@@ -306,11 +317,18 @@ def stock_info():
 ======================
     Energy Sector:
 ----------------------
-    Bawson Oil: {master_list["BSO"]["desc"]}
+    Bawson Oil: 
+        {master_list["BSO"]["desc"]}
 ======================
     Restaurant Sector:
 ----------------------
-    Colonel Sawyer's Chicken: {master_list["CSC"]["desc"]}
+    Colonel Sawyer's Chicken: 
+        {master_list["CSC"]["desc"]}
+======================
+    Technology Sector:
+----------------------
+    QIPS:
+        {master_list["QPS"]["desc"]}
     """)
     input("Press Enter to continue...")
     menu()
@@ -328,5 +346,5 @@ def help_menu():
 
 def save_quit():
     save_data()
-
+    
 main_screen()

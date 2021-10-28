@@ -29,6 +29,7 @@
     "stocks": {
         "BSO": {
             "price": 83,
+            "previous price": 83,
             "volatility": 0.059,
             "current news": "",
             "news change": 0,
@@ -38,6 +39,7 @@
         },
         "CSC": {
             "price": 17,
+            "previous price": 17,
             "volatility": 0.04,
             "current news": "",
             "news change": 0,
@@ -47,6 +49,7 @@
         },
         "QPS": {
             "price": 2,
+            "previous price": 2,
             "volatility": 0.02,
             "current news": "",
             "news change": 0,
@@ -105,5 +108,5 @@
             "affected stocks": ["QPS"],
             "stabalize": 0.04
         }
-    ]
+    ],
 }
