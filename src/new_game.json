@@ -96,6 +96,22 @@
             "stabalize": 0.08
         },
         {
+            "headline": "Oil Prices Plummet as Pipeline gets Attacked",
+            "effect": "down",
+            "change": 0.04,
+            "days": 2,
+            "affected stocks": ["BSO"],
+            "stabalize": 0.09
+        },
+        {
+            "headline": "Bawson Oil Partners wil Gas Stations to Offer Scratch and Win Fuel Prizes",
+            "effect": "up",
+            "change": 0.03,
+            "days": 7,
+            "affected stocks": ["BSO"],
+            "stabalize": 0.21
+        },
+        {
             "headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Chicken Shortage",
             "effect": "up",
             "change": 0.02,
@@ -128,6 +144,22 @@
             "stabalize": 0.10
         },
         {
+            "headline": "Colonel Sawyer's Chicken Enters into Partnership with Taco Restaurant to offer Combined Retail Space",
+            "effect": "up",
+            "change": 0.02,
+            "days": 3,
+            "affected stocks": ["CSC"],
+            "stabalize": 0.06
+        },
+        {
+            "headline": "Colonel Sawyer's Chicken Farms Found to be using carcinogenic Growth Hormones",
+            "effect": "down",
+            "change": 0.04,
+            "days": 2,
+            "affected stocks": ["CSC"],
+            "stabalize": 0.08
+        },
+        {
             "headline": "European Computer Network Goes Offline for Hours, QIPS prices rise",
             "effect": "up",
             "change": 0.10,
@@ -158,6 +190,22 @@
             "days": 1,
             "affected stocks": ["QPS"],
             "stabalize": 0.05
+        },
+        {
+            "headline": "Cryptocurrency Miners Utilize QIPS Network to make MILLIONS Overnight",
+            "effect": "up",
+            "change": 0.10,
+            "days": 2,
+            "affected stocks": ["QPS"],
+            "stabalize": 0.20
+        },
+        {
+            "headline": "Hackers Utilize QIPS Network to Spread Mining Malware",
+            "effect": "down",
+            "change": 0.10,
+            "days": 1,
+            "affected stocks": ["QPS"],
+            "stabalize": 0.10
         }
     ],
     "settings": {
