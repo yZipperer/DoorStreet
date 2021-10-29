@@ -3,6 +3,9 @@ import json
 import os
 import random
 
+cmd = 'mode 120, 30'
+os.system(cmd)
+
 master_list = {
     "BSO": {"sector": "energy", "desc": "Bawson Oil is a premier oil supplier. With hundreds of thousands of gas stations throughout the world, in addition to hundreds of oil rigs, production of millions of barrels per month is no tough task. They are also a large supplier of oil to major airlines throughout the world."},
     "CSC": {"sector": "restaurant", "desc": "Colonel Sawyer's Chicken has pioneered the fast food chicken industry. This chicken giant is popular worldwide and has seen great success through their special 42 herbs and spices recipe plus their 0 tolerance policy. In addition, they have managed to get their trough of chicken to replace existing main holiday courses."},
@@ -21,11 +24,11 @@ def save_data():
 
 def main_screen():
     print("""
-========================================
-Door Street - Stock Market Game
-========================================
-
+========================================================================================================================
+    Door Street - Stock Market Game
+========================================================================================================================
     """)
+
     input("Press Enter to continue...")
     menu()
 
@@ -41,7 +44,7 @@ def menu():
     5. Help
     6. Achievements
     7. Statistics
-    8. Save
+    8. Save/Quit
     9. Settings
 ======================
     """)
@@ -191,6 +194,45 @@ def sell_stock(stock):
         input("Press Enter to continue...")
         trading_floor()
 
+def news():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(f"""
+===================================================================================================
+    News -- Day: {inventory_data["time"]["day"]} -- Current Headlines: {len(inventory_data["active news"])}
+===================================================================================================
+    Energy Sector:
+    -----------------------------------------------------------------------------------------------
+        $BSO: {has_headline("BSO")}\u001b[37m
+    -----------------------------------------------------------------------------------------------
+    Restaurant Sector:
+    -----------------------------------------------------------------------------------------------
+        $CSC: {has_headline("CSC")}\u001b[37m
+    -----------------------------------------------------------------------------------------------
+    Technology Sector:
+    -----------------------------------------------------------------------------------------------
+        $QPS: {has_headline("QPS")}\u001b[37m
+===================================================================================================
+    """)
+    input("Press Enter to go back")
+    menu()
+
+def has_headline(stock):
+    currentNews = inventory_data["active news"]
+
+    for news in currentNews:
+        if stock in news["affected stocks"]:
+            if inventory_data["stocks"][stock]["days effect"] <= 0:
+                return "\u001b[33m" + news["headline"]
+            
+            if news["effect"] == "up":
+                return "\u001b[32m" + news["headline"]
+            elif news["effect"] == "down":
+                return "\u001b[31m" + news["headline"]
+            else:
+                return "\u001b[37m" + news["headline"]
+    
+    return "\u001b[37m None"
+
 def next_day():
     os.system('cls' if os.name == 'nt' else 'clear')
     inventory_data["time"]["day"] += 1
@@ -319,17 +361,17 @@ def stock_info():
 ======================
     Energy Sector:
 ----------------------
-    Bawson Oil: 
+    Bawson Oil ($BSO): 
         {master_list["BSO"]["desc"]}
 ======================
     Restaurant Sector:
 ----------------------
-    Colonel Sawyer's Chicken: 
+    Colonel Sawyer's Chicken ($CSC): 
         {master_list["CSC"]["desc"]}
 ======================
     Technology Sector:
 ----------------------
-    QIPS:
+    QIPS ($QPS):
         {master_list["QPS"]["desc"]}
     """)
     input("Press Enter to continue...")
