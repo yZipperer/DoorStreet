@@ -1,1 +1,166 @@
-{"money": 100, "time": {"day": 32}, "portfolio": {"energy": {"BSO": {"symbol": "$BSO", "shares": 0, "each": 0}}, "restaurant": {"CSC": {"symbol": "$CSC", "shares": 0, "each": 0}}, "technology": {"QPS": {"symbol": "$QPS", "shares": 0, "each": 0}}}, "stocks": {"BSO": {"price": 88.29684430513042, "previous price": 89.18873162134386, "volatility": 0.059, "current news": "Oil Spill in the South Atlantic, Millions Affected", "news change": 0.01, "news effect": "down", "days effect": 4, "stabalize": 0.07, "dayta": [78.103, 80.44609, 78.0327073, 77.252380227, 76.47985642473, 75.7150578604827, 74.95790728187788, 74.2083282090591, 73.46624492696851, 72.73158247769882, 77.82279325113774, 74.70988152109223, 71.72148626024854, 77.45920516106843, 82.02929826557146, 84.4901772135386, 81.95547189713244, 84.41413605404641, 81.88171197242502, 86.7127329787981, 83.24422365964618, 79.91445471326034, 86.30761109032117, 81.21546203599223, 86.00717429611578, 91.08159757958661, 93.81404550697421, 90.99962414176498, 90.08962790034734]}, "CSC": {"price": 15.867076822711319, "previous price": 15.555957669324822, "volatility": 0.04, "current news": "Chickens Infected with Deadly Disease, Farmers Brace for a Chicken Shortage", "news change": 0.02, "news effect": "up", "days effect": 3, "stabalize": 0.1, "dayta": [16.32, 16.9728, 15.27552, 16.803072, 15.1227648, 16.63504128, 16.9677421056, 17.307096947712, 17.65323888666624, 18.006303664399567, 18.366429737687557, 16.5297867639188, 15.868595293362048, 16.50333910509653, 16.83340588719846, 17.17007400494243, 17.513475485041276, 17.863744994742103, 18.221019894636946, 16.398917905173253, 17.054874621380183, 16.372679636524975, 15.717772451063976, 14.145995205957577, 15.560594726553335, 14.004535253898002, 15.404988779287802, 13.864489901359022, 15.250938891494924]}, "QPS": {"price": 1.9142109964077665, "previous price": 1.7401918149161513, "volatility": 0.02, "current news": "European Computer Network Goes Offline for Hours, QIPS prices rise", "news change": 0.1, "news effect": "up", "days effect": 0, "stabalize": 0.1, "dayta": [2.04, 1.9992, 1.959216, 1.99840032, 1.9584323136, 1.997600959872, 1.9576489406745599, 2.055531387708288, 1.9527548183228736, 2.148030300155161, 1.933227270139645, 1.894562724736852, 1.856671470242115, 2.0423386172663265, 1.8381047555396939, 1.8748668506504877, 2.0623535357155367, 1.856118182143983, 1.948924091251182, 1.851477886688623, 1.8144483289548505, 1.8507372955339476, 1.8137225496232687, 1.7774480986308034, 1.7596736176444954, 1.7420768814680505, 1.72465611265337, 1.7074095515268362, 1.7757059335879095]}}, "active news": [{"headline": "Oil Spill in the South Atlantic, Millions Affected", "effect": "down", "change": 0.01, "days": 7, "affected stocks": ["BSO"], "stabalize": 0.07}, {"headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Chicken Shortage", "effect": "up", "change": 0.02, "days": 5, "affected stocks": ["CSC"], "stabalize": 0.1}, {"headline": "European Computer Network Goes Offline for Hours, QIPS prices rise", "effect": "up", "change": 0.1, "days": 1, "affected stocks": ["QPS"], "stabalize": 0.1}], "news": [{"headline": "Border Tensions Cause Oil Exports to Limit", "effect": "up", "change": 0.01, "days": 7, "affected stocks": ["BSO"], "stabalize": 0.07}, {"headline": "Chicken Sandwich War Heats Up, Colonel Sawyer's Increases Production", "effect": "up", "change": 0.02, "days": 3, "affected stocks": ["CSC"], "stabalize": 0.06}, {"headline": "Consumers Stand to Supplement Income Through the QIPS Market, More Consumers Sign On", "effect": "down", "change": 0.02, "days": 3, "affected stocks": ["QPS"], "stabalize": 0.06}, {"headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold", "effect": "down", "change": 0.04, "days": 1, "affected stocks": ["CSC"], "stabalize": 0.04}, {"headline": "World's Largest QIPS Supplier to Halt for Machine Maintenance", "effect": "up", "change": 0.05, "days": 1, "affected stocks": ["QPS"], "stabalize": 0.05}, {"headline": "Report: Consumers Purchasing Alternative Fueled Vehicles", "effect": "down", "change": 0.04, "days": 2, "affected stocks": ["BSO"], "stabalize": 0.08}, {"headline": "Bawson Oil Executive Donates to Charity", "effect": "up", "change": 0.03, "days": 1, "affected stocks": ["BSO"], "stabalize": 0.03}, {"headline": "Rival Chicken Restaurants Unveil Special Chicken Seasoning Packets", "effect": "down", "change": 0.1, "days": 1, "affected stocks": ["CSC"], "stabalize": 0.1}, {"headline": "China Introduces Millions of Devices on the QIPS Network to Lower Regional Costs", "effect": "down", "change": 0.01, "days": 4, "affected stocks": ["QPS"], "stabalize": 0.04}], "settings": {"simplified trade menu": true}}
+{
+    "money": 100,
+    "time": {
+        "day": 1
+    },
+    "portfolio": {
+        "energy": {
+            "BSO": {
+                "symbol": "$BSO",
+                "shares": 0,
+                "each": 0
+            }
+        },
+        "restaurant": {
+            "CSC": {
+                "symbol": "$CSC",
+                "shares": 0,
+                "each": 0
+            }
+        },
+        "technology": {
+            "QPS": {
+                "symbol": "$QPS",
+                "shares": 0,
+                "each": 0
+            }
+        }
+    },
+    "stocks": {
+        "BSO": {
+            "price": 83,
+            "previous price": 83,
+            "volatility": 0.059,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0,
+            "stabalize": 0,
+            "dayta": [83]
+        },
+        "CSC": {
+            "price": 17,
+            "previous price": 17,
+            "volatility": 0.04,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0,
+            "stabalize": 0,
+            "dayta": [17]
+        },
+        "QPS": {
+            "price": 2,
+            "previous price": 2,
+            "volatility": 0.02,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0,
+            "stabalize": 0,
+            "dayta": [2]
+        }
+    },
+    "active news": [],
+    "news": [
+        {
+            "headline": "Oil Spill in the South Atlantic, Millions Affected",
+            "effect": "down",
+            "change": 0.01,
+            "days": 7,
+            "affected stocks": ["BSO"],
+            "stabalize": 0.07
+        },
+        {
+            "headline": "Bawson Oil Executive Donates to Charity",
+            "effect": "up",
+            "change": 0.03,
+            "days": 1,
+            "affected stocks": ["BSO"],
+            "stabalize": 0.03
+        },
+        {
+            "headline": "Border Tensions Cause Oil Exports to Limit",
+            "effect": "up",
+            "change": 0.01,
+            "days": 7,
+            "affected stocks": ["BSO"],
+            "stabalize": 0.07
+        },
+        {
+            "headline": "Report: Consumers Purchasing Alternative Fueled Vehicles",
+            "effect": "down",
+            "change": 0.04,
+            "days": 2,
+            "affected stocks": ["BSO"],
+            "stabalize": 0.08
+        },
+        {
+            "headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Chicken Shortage",
+            "effect": "up",
+            "change": 0.02,
+            "days": 5,
+            "affected stocks": ["CSC"],
+            "stabalize": 0.10
+        },
+        {
+            "headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold",
+            "effect": "down",
+            "change": 0.04,
+            "days": 1,
+            "affected stocks": ["CSC"],
+            "stabalize": 0.04
+        },
+        {
+            "headline": "Chicken Sandwich War Heats Up, Colonel Sawyer's Increases Production",
+            "effect": "up",
+            "change": 0.02,
+            "days": 3,
+            "affected stocks": ["CSC"],
+            "stabalize": 0.06
+        },
+        {
+            "headline": "Rival Chicken Restaurants Unveil Special Chicken Seasoning Packets",
+            "effect": "down",
+            "change": 0.10,
+            "days": 1,
+            "affected stocks": ["CSC"],
+            "stabalize": 0.10
+        },
+        {
+            "headline": "European Computer Network Goes Offline for Hours, QIPS prices rise",
+            "effect": "up",
+            "change": 0.10,
+            "days": 1,
+            "affected stocks": ["QPS"],
+            "stabalize": 0.10
+        },
+        {
+            "headline": "China Introduces Millions of Devices on the QIPS Network to Lower Regional Costs",
+            "effect": "down",
+            "change": 0.01,
+            "days": 4,
+            "affected stocks": ["QPS"],
+            "stabalize": 0.04
+        },
+        {
+            "headline": "Consumers Stand to Supplement Income Through the QIPS Market, More Consumers Sign On",
+            "effect": "down",
+            "change": 0.02,
+            "days": 3,
+            "affected stocks": ["QPS"],
+            "stabalize": 0.06
+        },
+        {
+            "headline": "World's Largest QIPS Supplier to Halt for Machine Maintenance",
+            "effect": "up",
+            "change": 0.05,
+            "days": 1,
+            "affected stocks": ["QPS"],
+            "stabalize": 0.05
+        }
+    ],
+    "settings": {
+        "simplified trade menu": false
+    }
+}

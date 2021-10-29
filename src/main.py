@@ -80,22 +80,20 @@ def trading_floor():
     if inventory_data["settings"]["simplified trade menu"] == True:
         print(f"""
 ========================================================================================
-    Trading Floor -- Day: {inventory_data["time"]["day"]} -- ${"{:.2f}".format(inventory_data["money"])}
+    Trading Floor -- Day: {inventory_data["time"]["day"]} -- ${"{:.2f}".format(inventory_data["money"])} -- avg: ${per_day()}/day
 ========================================================================================
     Energy Sector:
-    ------------------
-        $BSO: {inventory_data["portfolio"]["energy"]["BSO"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["energy"]["BSO"]["each"])} -- C: {check_color("BSO")}${"{:.2f}".format(inventory_data["stocks"]["BSO"]["price"])}\u001b[37m -- 30L: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["BSO"]["dayta"]))}\u001b[37m -- 30H: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["BSO"]["dayta"]))}\u001b[37m
-    ------------------
+    ------------------------------------------------------------------------
+        $BSO: {inventory_data["portfolio"]["energy"]["BSO"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["energy"]["BSO"]["each"])} - C: {check_color("BSO")}${"{:.2f}".format(inventory_data["stocks"]["BSO"]["price"])}\u001b[37m - 30L: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["BSO"]["dayta"]))}\u001b[37m 30H: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["BSO"]["dayta"]))}\u001b[37m
+    ------------------------------------------------------------------------
     Restaurant Sector:
-    ------------------
-        $CSC: {inventory_data["portfolio"]["restaurant"]["CSC"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["restaurant"]["CSC"]["each"])}
-            Current: {check_color("CSC")}${"{:.2f}".format(inventory_data["stocks"]["CSC"]["price"])}\u001b[37m
-    ------------------
+    ------------------------------------------------------------------------
+        $CSC: {inventory_data["portfolio"]["restaurant"]["CSC"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["restaurant"]["CSC"]["each"])} - C: {check_color("CSC")}${"{:.2f}".format(inventory_data["stocks"]["CSC"]["price"])}\u001b[37m - 30L: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["CSC"]["dayta"]))}\u001b[37m 30H: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["CSC"]["dayta"]))}\u001b[37m
+    ------------------------------------------------------------------------
     Technology Sector:
-    ------------------
-        $QPS: {inventory_data["portfolio"]["technology"]["QPS"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["QPS"]["each"])}
-            Current: {check_color("QPS")}${"{:.2f}".format(inventory_data["stocks"]["QPS"]["price"])}\u001b[37m
-======================
+    ------------------------------------------------------------------------
+        $QPS: {inventory_data["portfolio"]["technology"]["QPS"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["QPS"]["each"])} - C: {check_color("QPS")}${"{:.2f}".format(inventory_data["stocks"]["QPS"]["price"])}\u001b[37m - 30L: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["QPS"]["dayta"]))}\u001b[37m 30H: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["QPS"]["dayta"]))}\u001b[37m
+========================================================================================
     """)
     else:
         print(f"""
@@ -108,16 +106,19 @@ def trading_floor():
     ------------------
         $BSO: {inventory_data["portfolio"]["energy"]["BSO"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["energy"]["BSO"]["each"])}
             Current: {check_color("BSO")}${"{:.2f}".format(inventory_data["stocks"]["BSO"]["price"])}\u001b[37m
+                30 Day Low: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["BSO"]["dayta"]))}\u001b[37m 30 Day High: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["BSO"]["dayta"]))}\u001b[37m
     ------------------
     Restaurant Sector:
     ------------------
         $CSC: {inventory_data["portfolio"]["restaurant"]["CSC"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["restaurant"]["CSC"]["each"])}
             Current: {check_color("CSC")}${"{:.2f}".format(inventory_data["stocks"]["CSC"]["price"])}\u001b[37m
+                30 Day Low: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["CSC"]["dayta"]))}\u001b[37m 30 Day High: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["CSC"]["dayta"]))}\u001b[37m
     ------------------
     Technology Sector:
     ------------------
         $QPS: {inventory_data["portfolio"]["technology"]["QPS"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["QPS"]["each"])}
             Current: {check_color("QPS")}${"{:.2f}".format(inventory_data["stocks"]["QPS"]["price"])}\u001b[37m
+                30 Day Low: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["QPS"]["dayta"]))}\u001b[37m 30 Day High: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["QPS"]["dayta"]))}\u001b[37m
 ======================
     """)
 
@@ -146,6 +147,12 @@ def trading_floor():
             menu()
     except:
         return menu()
+
+def per_day():
+    if inventory_data["money"] > 100 or inventory_data["money"] < 100:
+        return "{:.2f}".format((inventory_data["money"] - 100) / inventory_data["time"]["day"])
+    else:
+        return 0
 
 def check_color(stock):
     if inventory_data["stocks"][stock]["price"] > inventory_data["stocks"][stock]["previous price"]:
@@ -346,7 +353,7 @@ def select_news():
     currentNews = inventory_data["active news"]
     
     i = 0
-    while i < 2:
+    while i < 1:
         news = random.choice(inventory_data["news"])
         if news not in currentNews:
             affected = news["affected stocks"][0]
