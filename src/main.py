@@ -242,6 +242,12 @@ def next_day():
         price = inventory_data["stocks"][stock]["price"]
         inventory_data["stocks"][stock]["previous price"] = price
 
+        if len(inventory_data["stocks"][stock]["dayta"]) >= 30:
+            inventory_data["stocks"][stock]["dayta"].pop(0)
+            inventory_data["stocks"][stock]["dayta"].append(price)
+        else:
+            inventory_data["stocks"][stock]["dayta"].append(price)
+
         if inventory_data["stocks"][stock]["news effect"] == "none":
             randNum = random.randrange(1, 100, 1)
             if randNum > 50 and randNum <=100:

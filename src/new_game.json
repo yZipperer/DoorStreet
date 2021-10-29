@@ -35,7 +35,8 @@
             "news change": 0,
             "news effect": "none",
             "days effect": 0,
-            "stabalize": 0
+            "stabalize": 0,
+            "dayta": []
         },
         "CSC": {
             "price": 17,
@@ -45,7 +46,8 @@
             "news change": 0,
             "news effect": "none",
             "days effect": 0,
-            "stabalize": 0
+            "stabalize": 0,
+            "dayta": []
         },
         "QPS": {
             "price": 2,
@@ -55,7 +57,8 @@
             "news change": 0,
             "news effect": "none",
             "days effect": 0,
-            "stabalize": 0
+            "stabalize": 0,
+            "dayta": []
         }
     },
     "active news": [],
