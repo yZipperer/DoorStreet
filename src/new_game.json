@@ -77,7 +77,23 @@
             "stabalize": 0.03
         },
         {
-            "headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage",
+            "headline": "Border Tensions Cause Oil Exports to Limit",
+            "effect": "up",
+            "change": 0.01,
+            "days": 7,
+            "affected stocks": ["BSO"],
+            "stabalize": 0.07
+        },
+        {
+            "headline": "Report: Consumers Purchasing Alternative Fueled Vehicles",
+            "effect": "down",
+            "change": 0.04,
+            "days": 2,
+            "affected stocks": ["BSO"],
+            "stabalize": 0.08
+        },
+        {
+            "headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Chicken Shortage",
             "effect": "up",
             "change": 0.02,
             "days": 5,
@@ -91,6 +107,22 @@
             "days": 1,
             "affected stocks": ["CSC"],
             "stabalize": 0.04
+        },
+        {
+            "headline": "Chicken Sandwich War Heats Up, Colonel Sawyer's Increases Production",
+            "effect": "up",
+            "change": 0.02,
+            "days": 3,
+            "affected stocks": ["CSC"],
+            "stabalize": 0.06
+        },
+        {
+            "headline": "Rival Chicken Restaurants Unveil Special Chicken Seasoning Packets",
+            "effect": "down",
+            "change": 0.10,
+            "days": 1,
+            "affected stocks": ["CSC"],
+            "stabalize": 0.10
         },
         {
             "headline": "European Computer Network Goes Offline for Hours, QIPS prices rise",
@@ -107,6 +139,22 @@
             "days": 4,
             "affected stocks": ["QPS"],
             "stabalize": 0.04
+        },
+        {
+            "headline": "Consumers Stand to Supplement Income Through the QIPS Market, More Consumers Sign On",
+            "effect": "down",
+            "change": 0.02,
+            "days": 3,
+            "affected stocks": ["QPS"],
+            "stabalize": 0.06
+        },
+        {
+            "headline": "World's Largest QIPS Supplier to Halt for Machine Maintenance",
+            "effect": "up",
+            "change": 0.05,
+            "days": 1,
+            "affected stocks": ["QPS"],
+            "stabalize": 0.05
         }
     ],
     "settings": {

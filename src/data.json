@@ -1,1 +1,98 @@
-{"money": 158.53889809124223, "time": {"day": 55}, "portfolio": {"energy": {"BSO": {"symbol": "$BSO", "shares": 0, "each": 0}}, "restaurant": {"CSC": {"symbol": "$CSC", "shares": 0, "each": 0}}, "technology": {"QPS": {"symbol": "$QPS", "shares": 0, "each": 0}}}, "stocks": {"BSO": {"price": 87.62026234918415, "previous price": 85.06821587299432, "volatility": 0.059, "current news": "Bawson Oil Executive Donates to Charity", "news change": 0.03, "news effect": "up", "days effect": 0, "stabalize": 0.03}, "CSC": {"price": 18.639794145553694, "previous price": 18.274307985836955, "volatility": 0.04, "current news": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage", "news change": 0.02, "news effect": "up", "days effect": 0, "stabalize": 0.1}, "QPS": {"price": 1.7941934134856001, "previous price": 1.9935482372062223, "volatility": 0.02, "current news": "", "news change": 0, "news effect": "none", "days effect": 0, "stabalize": 0}}, "active news": [{"headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage", "effect": "up", "change": 0.02, "days": 5, "affected stocks": ["CSC"], "stabalize": 0.1}, {"headline": "Bawson Oil Executive Donates to Charity", "effect": "up", "change": 0.03, "days": 1, "affected stocks": ["BSO"], "stabalize": 0.03}], "news": [{"headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold", "effect": "down", "change": 0.04, "days": 1, "affected stocks": ["CSC"], "stabalize": 0.04}, {"headline": "China Introduces Millions of Devices on the QIPS Network to Lower Regional Costs", "effect": "down", "change": 0.01, "days": 4, "affected stocks": ["QPS"], "stabalize": 0.04}, {"headline": "Oil Spill in the South Atlantic, Millions Affected", "effect": "down", "change": 0.01, "days": 7, "affected stocks": ["BSO"], "stabalize": 0.07}, {"headline": "European Computer Network Goes Offline for Hours, QIPS prices rise", "effect": "up", "change": 0.1, "days": 1, "affected stocks": ["QPS"], "stabalize": 0.1}], "settings": {"simplified trade menu": false}}
+{"money": 269.96, "time": {"day": 55}, "portfolio": {"energy": {"BSO": {"symbol": "$BSO", "shares": 0, "each": 0}}, "restaurant": {"CSC": {"symbol": "$CSC", "shares": 0, "each": 0}}, "technology": {"QPS": {"symbol": "$QPS", "shares": 0, "each": 0}}}, "stocks": {"BSO": {"price": 87.62026234918415, "previous price": 85.06821587299432, "volatility": 0.059, "current news": "Bawson Oil Executive Donates to Charity", "news change": 0.03, "news effect": "up", "days effect": 0, "stabalize": 0.03}, "CSC": {"price": 18.639794145553694, "previous price": 18.274307985836955, "volatility": 0.04, "current news": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage", "news change": 0.02, "news effect": "up", "days effect": 0, "stabalize": 0.1}, "QPS": {"price": 1.7941934134856001, "previous price": 1.9935482372062223, "volatility": 0.02, "current news": "", "news change": 0, "news effect": "none", "days effect": 0, "stabalize": 0}}, "active news": [{"headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Shortage", "effect": "up", "change": 0.02, "days": 5, "affected stocks": ["CSC"], "stabalize": 0.1}, {"headline": "Bawson Oil Executive Donates to Charity", "effect": "up", "change": 0.03, "days": 1, "affected stocks": ["BSO"], "stabalize": 0.03}], "news": [
+    {
+        "headline": "Oil Spill in the South Atlantic, Millions Affected",
+        "effect": "down",
+        "change": 0.01,
+        "days": 7,
+        "affected stocks": ["BSO"],
+        "stabalize": 0.07
+    },
+    {
+        "headline": "Bawson Oil Executive Donates to Charity",
+        "effect": "up",
+        "change": 0.03,
+        "days": 1,
+        "affected stocks": ["BSO"],
+        "stabalize": 0.03
+    },
+    {
+        "headline": "Border Tensions Cause Oil Exports to Limit",
+        "effect": "up",
+        "change": 0.01,
+        "days": 7,
+        "affected stocks": ["BSO"],
+        "stabalize": 0.07
+    },
+    {
+        "headline": "Report: Consumers Purchasing Alternative Fueled Vehicles",
+        "effect": "down",
+        "change": 0.04,
+        "days": 2,
+        "affected stocks": ["BSO"],
+        "stabalize": 0.08
+    },
+    {
+        "headline": "Chickens Infected with Deadly Disease, Farmers Brace for a Chicken Shortage",
+        "effect": "up",
+        "change": 0.02,
+        "days": 5,
+        "affected stocks": ["CSC"],
+        "stabalize": 0.10
+    },
+    {
+        "headline": "Colonel Sawyer's Admits to Firing Secretary over Coffee being 1 Degree Too cold",
+        "effect": "down",
+        "change": 0.04,
+        "days": 1,
+        "affected stocks": ["CSC"],
+        "stabalize": 0.04
+    },
+    {
+        "headline": "Chicken Sandwich War Heats Up, Colonel Sawyer's Increases Production",
+        "effect": "up",
+        "change": 0.02,
+        "days": 3,
+        "affected stocks": ["CSC"],
+        "stabalize": 0.06
+    },
+    {
+        "headline": "Rival Chicken Restaurants Unveil Special Chicken Seasoning Packets",
+        "effect": "down",
+        "change": 0.10,
+        "days": 1,
+        "affected stocks": ["CSC"],
+        "stabalize": 0.10
+    },
+    {
+        "headline": "European Computer Network Goes Offline for Hours, QIPS prices rise",
+        "effect": "up",
+        "change": 0.10,
+        "days": 1,
+        "affected stocks": ["QPS"],
+        "stabalize": 0.10
+    },
+    {
+        "headline": "China Introduces Millions of Devices on the QIPS Network to Lower Regional Costs",
+        "effect": "down",
+        "change": 0.01,
+        "days": 4,
+        "affected stocks": ["QPS"],
+        "stabalize": 0.04
+    },
+    {
+        "headline": "Consumers Stand to Supplement Income Through the QIPS Market, More Consumers Sign On",
+        "effect": "down",
+        "change": 0.02,
+        "days": 3,
+        "affected stocks": ["QPS"],
+        "stabalize": 0.06
+    },
+    {
+        "headline": "World's Largest QIPS Supplier to Halt for Machine Maintenance",
+        "effect": "up",
+        "change": 0.05,
+        "days": 1,
+        "affected stocks": ["QPS"],
+        "stabalize": 0.05
+    }
+], "settings": {"simplified trade menu": false}}
