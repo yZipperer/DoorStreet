@@ -76,7 +76,29 @@ def menu():
 
 def trading_floor():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(f"""
+
+    if inventory_data["settings"]["simplified trade menu"] == True:
+        print(f"""
+========================================================================================
+    Trading Floor -- Day: {inventory_data["time"]["day"]} -- ${"{:.2f}".format(inventory_data["money"])}
+========================================================================================
+    Energy Sector:
+    ------------------
+        $BSO: {inventory_data["portfolio"]["energy"]["BSO"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["energy"]["BSO"]["each"])} -- C: {check_color("BSO")}${"{:.2f}".format(inventory_data["stocks"]["BSO"]["price"])}\u001b[37m -- 30L: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["BSO"]["dayta"]))}\u001b[37m -- 30H: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["BSO"]["dayta"]))}\u001b[37m
+    ------------------
+    Restaurant Sector:
+    ------------------
+        $CSC: {inventory_data["portfolio"]["restaurant"]["CSC"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["restaurant"]["CSC"]["each"])}
+            Current: {check_color("CSC")}${"{:.2f}".format(inventory_data["stocks"]["CSC"]["price"])}\u001b[37m
+    ------------------
+    Technology Sector:
+    ------------------
+        $QPS: {inventory_data["portfolio"]["technology"]["QPS"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["QPS"]["each"])}
+            Current: {check_color("QPS")}${"{:.2f}".format(inventory_data["stocks"]["QPS"]["price"])}\u001b[37m
+======================
+    """)
+    else:
+        print(f"""
 ======================
     Trading Floor -- Day: {inventory_data["time"]["day"]}
 ======================
@@ -98,6 +120,7 @@ def trading_floor():
             Current: {check_color("QPS")}${"{:.2f}".format(inventory_data["stocks"]["QPS"]["price"])}\u001b[37m
 ======================
     """)
+
     string = input("Enter Stock To Trade: ")
     try:
         if str(string) in master_list:
