@@ -9,7 +9,8 @@ os.system(cmd)
 master_list = {
     "BSO": {"sector": "energy", "desc": "Bawson Oil is a premier oil supplier. With hundreds of thousands of gas stations throughout the world, in addition to hundreds of oil rigs, production of millions of barrels per month is no tough task. They are also a large supplier of oil to major airlines throughout the world."},
     "CSC": {"sector": "restaurant", "desc": "Colonel Sawyer's Chicken has pioneered the fast food chicken industry. This chicken giant is popular worldwide and has seen great success through their special 42 herbs and spices recipe plus their 0 tolerance policy. In addition, they have managed to get their trough of chicken to replace existing main holiday courses."},
-    "QPS": {"sector": "technology", "desc": "QIPS is a market place where users can purchase shares of computing power that others are not currently using. The same users can also sell their power when they are not using it. QIPS has largely grown due to a large portion of their users using their service for gaming. They have also managed to keep their prices stable, even during day to day fluctuations in computing availability."}
+    "QPS": {"sector": "technology", "desc": "QIPS is a market place where users can purchase shares of computing power that others are not currently using. The same users can also sell their power when they are not using it. QIPS has largely grown due to a large portion of their users using their service for gaming. They have also managed to keep their prices stable, even during day to day fluctuations in computing availability."},
+    "DOG": {"sector": "crypto", "desc": "DOG Coin was created in the early 2000s with relation to an internet meme. Since, the coin has gained popularity amongst internet goers. But, it is also accepted by many retailers."}
 }
 
 def load_data():
@@ -93,6 +94,10 @@ def trading_floor():
     Technology Sector:
     ------------------------------------------------------------------------
         $QPS: {inventory_data["portfolio"]["technology"]["QPS"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["QPS"]["each"])} - C: {check_color("QPS")}${"{:.2f}".format(inventory_data["stocks"]["QPS"]["price"])}\u001b[37m - 30L: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["QPS"]["dayta"]))}\u001b[37m 30H: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["QPS"]["dayta"]))}\u001b[37m
+    ------------------------------------------------------------------------
+    Crypto Sector:
+    ------------------------------------------------------------------------
+        $DOG: {inventory_data["portfolio"]["technology"]["DOG"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["DOG"]["each"])} - C: {check_color("DOG")}${"{:.2f}".format(inventory_data["stocks"]["DOG"]["price"])}\u001b[37m - 30L: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["DOG"]["dayta"]))}\u001b[37m 30H: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["DOG"]["dayta"]))}\u001b[37m
 ========================================================================================
     """)
     else:
@@ -119,6 +124,12 @@ def trading_floor():
         $QPS: {inventory_data["portfolio"]["technology"]["QPS"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["QPS"]["each"])}
             Current: {check_color("QPS")}${"{:.2f}".format(inventory_data["stocks"]["QPS"]["price"])}\u001b[37m
                 30 Day Low: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["QPS"]["dayta"]))}\u001b[37m 30 Day High: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["QPS"]["dayta"]))}\u001b[37m
+    ------------------
+    Crypto Sector:
+    ------------------
+        $DOG: {inventory_data["portfolio"]["technology"]["DOG"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["DOG"]["each"])}
+            Current: {check_color("DOG")}${"{:.2f}".format(inventory_data["stocks"]["DOG"]["price"])}\u001b[37m
+                30 Day Low: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["DOG"]["dayta"]))}\u001b[37m 30 Day High: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["DOG"]["dayta"]))}\u001b[37m
 ======================
     """)
 
@@ -241,6 +252,10 @@ def news():
     Technology Sector:
     -----------------------------------------------------------------------------------------------
         $QPS: {has_headline("QPS")}\u001b[37m
+    -----------------------------------------------------------------------------------------------
+    Technology Sector:
+    -----------------------------------------------------------------------------------------------
+        $DOG: {has_headline("DOG")}\u001b[37m
 ===================================================================================================
     """)
     input("Press Enter to go back")
@@ -409,6 +424,11 @@ def stock_info():
 ----------------------
     QIPS ($QPS):
         {master_list["QPS"]["desc"]}
+======================
+    Crypto Sector:
+----------------------
+    DOG Coin ($DOG):
+        {master_list["DOG"]["desc"]}
     """)
     input("Press Enter to continue...")
     menu()
