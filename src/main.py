@@ -127,12 +127,12 @@ def trading_floor():
     ------------------
     Crypto Sector:
     ------------------
-        $DOG: {inventory_data["portfolio"]["technology"]["DOG"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["technology"]["DOG"]["each"])}
+        $DOG: {inventory_data["portfolio"]["crypto"]["DOG"]["shares"]} @ ${"{:.2f}".format(inventory_data["portfolio"]["crypto"]["DOG"]["each"])}
             Current: {check_color("DOG")}${"{:.2f}".format(inventory_data["stocks"]["DOG"]["price"])}\u001b[37m
                 30 Day Low: \u001b[31m${"{:.2f}".format(min(inventory_data["stocks"]["DOG"]["dayta"]))}\u001b[37m 30 Day High: \u001b[32m${"{:.2f}".format(max(inventory_data["stocks"]["DOG"]["dayta"]))}\u001b[37m
 ======================
     """)
-
+    
     string = input("Enter Stock To Trade: ")
     try:
         if str(string) in master_list:

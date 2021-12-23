@@ -24,6 +24,13 @@
                 "shares": 0,
                 "each": 0
             }
+        },
+        "crypto": {
+            "DOG": {
+                "symbol": "$DOG",
+                "shares": 0,
+                "each": 0
+            }
         }
     },
     "stocks": {
@@ -59,6 +66,17 @@
             "days effect": 0,
             "stabalize": 0,
             "dayta": [2]
+        },
+        "DOG": {
+            "price": 0.12,
+            "previous price": 0.12,
+            "volatility": 0.06,
+            "current news": "",
+            "news change": 0,
+            "news effect": "none",
+            "days effect": 0,
+            "stabalize": 0,
+            "dayta": [0.12]
         }
     },
     "active news": [],
@@ -206,6 +224,22 @@
             "days": 1,
             "affected stocks": ["QPS"],
             "stabalize": 0.10
+        },
+        {
+            "headline": "Elon Musket Twits about DOG Coin on Moon",
+            "effect": "up",
+            "change": 0.10,
+            "days": 1,
+            "affected stocks": ["DOG"],
+            "stabalize": 0.10
+        },
+        {
+            "headline": "DOG Coin Faces Pushback from other Coins",
+            "effect": "down",
+            "change": 0.02,
+            "days": 3,
+            "affected stocks": ["DOG"],
+            "stabalize": 0.06
         }
     ],
     "settings": {
